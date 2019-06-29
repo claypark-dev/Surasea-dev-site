@@ -60,13 +60,29 @@
 
   <!-- Masthead -->
   <header class="masthead bg-primary text-white text-center">
-    <div class="container d-flex align-items-center flex-column">
+    <div class="wow fadeInUp container d-flex align-items-center flex-column">
 
       <!-- Masthead Avatar Image -->
       <img class="masthead-avatar" src="img/avataaars.svg" alt="">
 
       <!-- Masthead Heading -->
-      <h1 class="animated fadeIn masthead-heading text-uppercase mb-0">The Technologies We Use</h1>
+      <h1 class="fade-scroll masthead-heading text-uppercase mb-0">The Technologies We Use</h1>
+      <script src="https://code.jquery.com/jquery-1.10.2.js">
+      $(function) {
+        var documentEl = $(document),
+          fadeElem = $('.fade_scroll');
+        documentEl.on('scroll', function()){
+          var currScrollPos = documentEl.scrollTop();
+          fadeElem.each(function()){
+            var $this = $(this),
+              elemOffsetTop = $this.offset().top;
+              if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos - elemOffsetTop)/400);
+            });
+          });
+        });
+      });
+      </script>
+
 
       <!-- Icon Divider -->
       <div class="divider-custom divider-light">
@@ -74,17 +90,17 @@
         <div class="divider-custom-icon">
           <i class="fas fa-star"></i>
         </div>
-        <div class="animated fadeIn divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
       </div>
       <!-- Masthead Subheading -->
-      <p class="animated fadeIn masthead-subheading font-weight-light mb-0">The Latest and Greatest</p>
+      <p class="masthead-subheading font-weight-light mb-0">The Latest and Greatest</p>
 
     </div>
   </header>
 
   <!-- Portfolio Section -->
   <section class="page-section portfolio" id="portfolio">
-    <div class="container">
+    <div class="wow fadeInUp container">
 
       <!-- Portfolio Section Heading -->
       <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
@@ -102,7 +118,7 @@
       <div class="row">
 
         <!-- Portfolio Item 1 -->
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-6 col-lg-7">
           <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
@@ -181,7 +197,7 @@
 
   <!-- About Section -->
   <section class="page-section bg-primary text-white mb-0" id="about">
-    <div class="container">
+    <div class="wow fadeInUp container">
 
       <!-- About Section Heading -->
       <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
@@ -202,6 +218,7 @@
         </div>
         <div class="col-lg-4 mr-auto">
           <p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p>
+          <div class="container" style="height: 100px;"></div>
         </div>
       </div>
 
@@ -212,15 +229,15 @@
         <div class="col-lg-4 mb-5 mb-lg-0">
         </div>
         <div class="col-lg-4 mb-5 mb-lg-0">
-          <h4 class="wow fadeInUp text-uppercase mb-2" style="visibility: visible; animation-name: fadeInUp; animation-delay: 0.1s;" "text-uppercase mb-2">Location</h4>
-          <p class= "wow fadeInUp text-uppercase mb-2" style="visibility: visible; animation-name: fadeInUp; animation-delay: 0.1s;" "lead mb-0">
+          <h4 class="text-uppercase mb-2">Location</h4>
+          <p class="lead mb-0">
             <br>Raleigh, NC and Atlanta, GA</p>
-          <script>new WOW().init();</script>
-      </div>    </div>
+      </div>
+    </div>
   </footer>
 
   <!-- Copyright Section -->
-  <section class="copyright py-4 text-center text-white">
+  <section class="fadeInUp copyright py-4 text-center text-white">
     <div class="container">
       <small>Copyright &copy; Surasea</small>
     </div>
@@ -473,6 +490,7 @@
   <script src="../vendor/jquery/jquery.min.js"></script>
   <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+
   <!-- Plugin JavaScript -->
   <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
@@ -482,6 +500,7 @@
 
   <!-- Custom scripts for this template -->
   <script src="../js/freelancer.min.js"></script>
+  <script>new WOW().init();</script>
 
 </body>
 
