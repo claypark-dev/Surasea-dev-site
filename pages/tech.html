@@ -63,23 +63,6 @@
     <div class="wow fadeInUp container d-flex align-items-center flex-column">
       <!-- Masthead Heading -->
       <h1 class="fade-scroll masthead-heading text-uppercase mb-0">The Technologies We Use</h1>
-      <script src="https://code.jquery.com/jquery-1.10.2.js">
-      $(function) {
-        var documentEl = $(document),
-          fadeElem = $('.fade_scroll');
-        documentEl.on('scroll', function()){
-          var currScrollPos = documentEl.scrollTop();
-          fadeElem.each(function()){
-            var $this = $(this),
-              elemOffsetTop = $this.offset().top;
-              if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos - elemOffsetTop)/400);
-            });
-          });
-        });
-      });
-      </script>
-
-
       <!-- Icon Divider -->
       <div class="divider-custom divider-light">
         <div class="animated fadeIn divider-custom-line"></div>
