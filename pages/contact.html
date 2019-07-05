@@ -7,45 +7,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="shortcut icon" href="favicon.ico" />
+
   <title>Surasea Full Stack Development</title>
 
   <!-- Custom fonts for this theme -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-  <link href="css/mdb.min.css" rel="stylesheet">
 
   <!-- Theme CSS -->
-  <link href="css/freelancer.min.css" rel="stylesheet">
+  <link href="../css/freelancer.min.css" rel="stylesheet">
+  <style>
+    #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+         }
 
+
+  </style>
 </head>
 
 <body id="page-top">
-    <!-- SCRIPTS -->
-  <!-- JQuery -->
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="js/popper.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
 
   <!-- Navigation -->
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <nav class="navbar navbar-expand-lg py-0 bg-secondary text-uppercase flex-nowrap" id="mainNav">
-=======
-  <nav class="navbar navbar-expand-lg bg-secondary text-uppercase flex-nowrap" id="mainNav">
->>>>>>> parent of 187b79f... Navbar UI updates
-    <div class="container col-sm-7 my-auto">
-=======
   <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
     <div class="container">
->>>>>>> parent of 0842ec5... Style updates
       <!--TODO add image logo-->
-      <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="img\bannerlogos\Surasea banner.png" class="img-fluid" alt="Logo"></a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="../img/bannerlogos/Surasea banner.png" class="img-fluid" alt="Logo"></a>
       <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -53,170 +41,49 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html">Home</a>
+                <a class="nav-link py-3 px-0 px-lg-3 rounded" href="../index.html">Home</a>
               </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="pages/about.html">About Us</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="about.html">About Us</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="pages/tech.html">Technologies</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="tech.html">Technologies</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="pages/contact.html">Contact</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="contact.html">Contact</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Masthead -->
-  <header class="masthead bg-primary text-white text-center">
-    <div class="container d-flex align-items-center flex-column">
-
-      <!-- Masthead Avatar Image -->
-      <img class="animate fadeIn masthead-avatar mb-5" src="img/avataaars.svg" alt="">
-
-      <!-- Masthead Heading -->
-      <h1 class="masthead-heading text-uppercase mb-0">Welcome to Surasea</h1>
-
-      <!-- Icon Divider -->
-      <div class="divider-custom divider-light">
-        <div class="divider-custom-line"></div>
-        <div class="divider-custom-icon">
-          <i class="fas fa-star"></i>
-        </div>
-        <div class="divider-custom-line"></div>
-      </div>
-
-      <!-- Masthead Subheading -->
-      <p class="masthead-subheading font-weight-light mb-0">Innovation is Now</p>
-
-    </div>
-  </header>
-
   <!-- Portfolio Section -->
   <section class="page-section portfolio" id="portfolio">
-    <div class="container">
-
-      <!-- Portfolio Section Heading -->
-      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Our Work</h2>
-
-      <!-- Icon Divider -->
-      <div class="divider-custom">
-        <div class="divider-custom-line"></div>
-        <div class="divider-custom-icon">
-          <i class="fas fa-star"></i>
-        </div>
-        <div class="divider-custom-line"></div>
+    <div class="container" style = "padding-top: 100px">
+      <div class = "row">
+        <div class="col-sm">
+            <h2 class = "text-secondary">Contact Information</h2>
+          </div>
+          <div class="col-sm">
+            <script>
+              function initMap() {
+                // The location of Surasea
+                //35.759718, -78.653365
+                var caraleigh = {lat: 35.759718, lng: -78.653365};
+                // The map, centered at Uluru
+                var map = new google.maps.Map(
+                    document.getElementById('map'), {zoom: 15, center: caraleigh});
+                // The marker, positioned at Uluru
+                var marker = new google.maps.Marker({position: caraleigh, map: map});
+              }
+            </script>
+              <div id="map"></div>
+              <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ-8SvX0hX8ErParAo8f3M4MIRxl15-Wk&callback=initMap"
+  type="text/javascript"></script>
+          </div>
       </div>
 
-      <!-- Portfolio Grid Items -->
-      <div class="row">
 
-        <!-- Portfolio Item 1 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
-            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="portfolio-item-caption-content text-center text-white">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/cabin.png" alt="">
-          </div>
-        </div>
-
-        <!-- Portfolio Item 2 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
-            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="portfolio-item-caption-content text-center text-white">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/cake.png" alt="">
-          </div>
-        </div>
-
-        <!-- Portfolio Item 3 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
-            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="portfolio-item-caption-content text-center text-white">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/circus.png" alt="">
-          </div>
-        </div>
-
-        <!-- Portfolio Item 4 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
-            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="portfolio-item-caption-content text-center text-white">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/game.png" alt="">
-          </div>
-        </div>
-
-        <!-- Portfolio Item 5 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5">
-            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="portfolio-item-caption-content text-center text-white">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/safe.png" alt="">
-          </div>
-        </div>
-
-        <!-- Portfolio Item 6 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
-            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="portfolio-item-caption-content text-center text-white">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/submarine.png" alt="">
-          </div>
-        </div>
-
-      </div>
-      <!-- /.row -->
-
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section class="page-section bg-primary text-white mb-0" id="about">
-    <div class="container">
-
-      <!-- About Section Heading -->
-      <h2 class="page-section-heading text-center text-uppercase text-white">About Us</h2>
-
-      <!-- Icon Divider -->
-      <div class="divider-custom divider-light">
-        <div class="divider-custom-line"></div>
-        <div class="divider-custom-icon">
-          <i class="fas fa-star"></i>
-        </div>
-        <div class="divider-custom-line"></div>
-      </div>
-
-      <!-- About Section Content -->
-      <div class="row">
-        <div class="col-lg-4 ml-auto">
-          <p class="lead">Surasea is a small team of developers which releases full stack applications for web apps and smart phones.</p>
-        </div>
-        <div class="col-lg-4 mr-auto">
-          <p class="lead">Our team, which was founded in 2019, is a small group of college age developers which operate in our spare time to develop quality, professional products.</p>
-        </div>
-      </div>
-      <div>
     </div>
   </section>
 
@@ -227,7 +94,7 @@
         <div class="col-lg-4 mb-5 mb-lg-0">
         </div>
         <div class="col-lg-4 mb-5 mb-lg-0">
-          <h4 class="text-uppercase mb-2">Location</h4>
+          <h4 class="text-uppercasse mb-2">Location</h4>
           <p class="lead mb-0">
             <br>Raleigh, NC and Atlanta, GA</p>
       </div>
@@ -237,7 +104,7 @@
   <!-- Copyright Section -->
   <section class="copyright py-4 text-center text-white">
     <div class="container">
-      <small>Copyright &copy; Surasea</small>
+      <small>Copyright &copy; Your Website 2019</small>
     </div>
   </section>
 
