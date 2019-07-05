@@ -6922,7 +6922,7 @@ a.close.disabled {
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
 button.bg-primary:focus {
-  background-color: #148f77 !important;
+  background-color: #3185da !important;
 }
 
 .bg-secondary {
@@ -7044,7 +7044,7 @@ button.bg-dark:focus {
 }
 
 .border-primary {
-  border-color: #1abc9c !important;
+  border-color: #3185da !important;
 }
 
 .border-secondary {
@@ -10371,6 +10371,9 @@ button.bg-dark:focus {
 .text-white {
   color: #fff !important;
 }
+.text-bluey {
+  color: #3185da !important;
+}
 
 .text-primary {
   color: #1abc9c !important;
@@ -10676,7 +10679,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-  color: #1abc9c;
+  color: #a4a8a7;
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
